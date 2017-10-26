@@ -17,11 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from carros.views import CarList, CarDetail
 
 from carros.views import home
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
-    #url(r'^tweet/create$', TweetCreateView.as_view(), name='TweetCreate'),
-
+    url(r'^car$', CarList.as_view(), name='car_list'),
+    url(r'^cardetail/(?P<id>\d)/$', CarDetail.as_view(), name='car_detail'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
