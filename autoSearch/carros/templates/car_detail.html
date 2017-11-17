@@ -19,12 +19,25 @@
     <link href="{% static 'static/bootstrap/css/album.css' %}" rel="stylesheet">
   </head>
   <body>
-    <p>{{object.ttype}}</p>
-    <p>{{object.year}}</p>
-    <p>{{object.colour}}</p>
-    <p>{{object.price}}</p>
-    <p>{{object.created}}</p>
+    <div class="album text-muted">
+      <div class="container">
 
+        <div class="row">
+
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+            <p class="card-text">    <p>{{object.ttype}}</p>
+                <p>Type: {{object.year}}</p>
+                <p>Color: {{object.colour}}</p>
+                <p>Pecio: {{object.price}}</p>
+                <p>Fecha: {{object.created}}</p> 
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
